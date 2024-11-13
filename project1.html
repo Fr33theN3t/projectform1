@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+body {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+}
+
+form#contactForm {
+	background: #f9f9f9;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	display: block;
+	margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+	width: 250px;
+	padding: 8px;
+	margin: 5px 0 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+label[for="businessAccount"] {
+	margin: 5px 0 20px;
+}
+
+input[type="text"]#details {
+	width: 100%;
+}
+
+.btn {
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 150px;
+}
+
+.btn:hover {
+	background-color: #45a049;
+}
+
+.hidden {
+	display: none;
+}
+
+</style>
+
+<script>
+
+
+
+
+</script>
+
+<body>
+    <form id="contactForm">
+	<label for="name">Name:</label>
+	<input required type="text" id="name" name="name">
+
+	<label for="email">Email*:</label>
+	<input required type="email" id="email" name="email" >
+
+	<label for="phone">Phone Number:</label>
+	<input required type="text" id="phone" name="phone">
+
+	<label for="businessAccount">
+		Business Account:
+		<input type="checkbox" id="BusinessAccount" name="businessAccount">
+	</label>
+
+	<div id="CompanyInfo" class="hidden">
+		<label for="companyName">Company Name:</label>
+		<input type="text" id="companyName" name="companyName">
+	</div>
+
+	<label for="reason">Reason for contact:</label>
+	<select required id="reason" name="reason">
+		<option value="">Please select</option>
+		<option value="general">General Inquiry</option>
+		<option value="feedback">Feedback</option>
+		<option value="other">Other</option>
+	</select>
+
+	<div id="additionalInfo" class="hidden">
+		<label for="details">Additional Details:</label>
+		<input type="text" id="details" name="details">
+	</div>
+
+	<a class="btn">Submit</a>
+</form>
+</body>
+</html>
