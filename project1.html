@@ -29,7 +29,7 @@ label {
 input[type="text"],
 input[type="email"],
 select {
-	width: 250px;
+	width: 250px;  
 	padding: 8px;
 	margin: 5px 0 20px;
 	display: inline-block;
@@ -67,11 +67,17 @@ input[type="text"]#details {
 
 </style>
 
-<script>
+<script defer>
+let businessAccount = document.querySelector('#BusinessAccount');
+let companyInfo = document.querySelector('#CompanyName');
 
-
-
-
+businessAccount.addEventListener('change', function() {
+    if (this.checked) {
+        companyInfo.classList.remove('hidden');
+    } else {
+        companyInfo.classList.add('hidden');
+    }
+});
 </script>
 
 <body>
