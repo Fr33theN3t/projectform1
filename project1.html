@@ -68,8 +68,11 @@ input[type="text"]#details {
 </style>
 
 <script defer>
-let businessAccount = document.querySelector('#BusinessAccount');
-let companyInfo = document.querySelector('#CompanyName');
+
+document.addEventListener('DOMContentLoaded', () => {
+
+const businessAccount = document.querySelector('#BusinessAccount');
+const companyInfo = document.querySelector('#CompanyInfo');
 
 businessAccount.addEventListener('change', function() {
     if (this.checked) {
@@ -77,6 +80,7 @@ businessAccount.addEventListener('change', function() {
     } else {
         companyInfo.classList.add('hidden');
     }
+});
 });
 </script>
 
